@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ExhentaiCookieGenerator</string>
+    <string name="action_settings">更换站点</string>
+    <string name="main_tag">ExhentaiCookie生成器</string>
+    <string name="button">一键生成</string>
+    <string name="url">更新熊猫书签站点：</string>
+    <string name="yes">确定</string>
+    <string name="no">取消</string>
+    <string name="neutral">还原</string>
+    <string name="toastMessage">更换成功</string>
+    <string name="network_error">无法从指定站点获取exkey</string>
+    <string name="panda_url_incorrect">站点URL可能出错</string>
+    <string name="url_invalid">无效的站点URL</string>
+</resources>
