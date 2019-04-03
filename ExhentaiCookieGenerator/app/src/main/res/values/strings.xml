@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">ExhentaiCookieGenerator</string>
     <string name="action_settings">更换站点</string>
+    <string name="about">关于</string>
     <string name="main_tag">ExhentaiCookie生成器</string>
     <string name="button">一键生成</string>
     <string name="url">更新熊猫书签站点：</string>

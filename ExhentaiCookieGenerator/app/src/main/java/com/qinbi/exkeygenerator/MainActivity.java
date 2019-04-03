@@ -2,7 +2,9 @@ package com.qinbi.exkeygenerator;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -36,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 ExCookieGenerator ecg = new ExCookieGenerator(getPandaUrl());
                 ecg.start();
                 try {
-                    ecg.join(7000);
+                    ecg.join(7000L);
                 } catch (InterruptedException ie) {
                     ie.printStackTrace();
                 }
@@ -77,10 +79,14 @@ public class MainActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            setPandaUrl();
-            return true;
+        switch(id){
+            case R.id.action_settings:
+                setPandaUrl();
+                return true;
+            case R.id.About:
+                Intent goToDeveloper = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/volatileAntiEntropy/EXhentaiCookieGenerator"));
+                startActivity(goToDeveloper);
+                return true;
         }
 
         return super.onOptionsItemSelected(item);

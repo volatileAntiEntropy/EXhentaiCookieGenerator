@@ -33,9 +33,9 @@ public class ExCookieGenerator extends Thread {
 
     @Override
     public void run() {
-        String url = pandaUrl + "/panda.js?" + System.currentTimeMillis();
+        String url = pandaUrl + "/exkey-public?" + System.currentTimeMillis();
         try {
-            response = Jsoup.connect(url.substring(0, url.lastIndexOf('/')) + "/exkey-public?" + System.currentTimeMillis())
+            response = Jsoup.connect(url)
                     .method(Connection.Method.GET)
                     .ignoreContentType(true).execute();
         } catch (IOException e) {
